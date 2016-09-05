@@ -9,10 +9,12 @@
       <a-assets>
         <img id="texture" src="texture.png">
       </a-assets>
-      <a-camera fov="80"><a-cursor></a-cursor></a-camera>
-      <a-box color="red" width="3"></a-box>
-      <a-box src="#texture" depth="2" height="5" width="1"></a-box>
-      <a-sky color="#432FA0"></a-sky>
+      <a-entity position="0 0 5">
+        <a-camera></a-camera>
+      </a-entity>
+      <a-box color="red" position="3 0 0" width="3" height="2" depth="1"></a-box>
+      <a-box src="#texture" position="-1 0 0" width="3" height="3" depth="3"></a-box>
+      <a-sky color="#210657"></a-sky>
     </a-scene>
   </body>
 </html>
