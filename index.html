@@ -3,6 +3,32 @@
   <head>
     <title></title>
     <script src="https://aframe.io/releases/0.3.0/aframe.js"></script>
+    <script>      
+      AFRAME.registerPrimitive('a-petersrobot', {
+        defaultComponents: {
+          geometry: {
+            primitive: 'sphere',
+            radius: 1,
+            segmentsWidth: 16,
+            segmentsHeight: 16
+          },
+          material: {
+            color: '#ccc',
+            opacity: 0.7
+          }
+        },
+
+        init: function() {
+          this.el.addEventListener('click', () => {
+            alert('You clicked the robot!');
+          });
+        },
+
+        update: function() {
+          
+        }
+      });
+    </script>
   </head>
   <body>
     <a-scene>
@@ -12,8 +38,9 @@
       <a-entity position="0 0 5">
         <a-camera></a-camera>
       </a-entity>
-      <a-box color="red" position="3 0 0" width="3" height="2" depth="1"></a-box>
-      <a-box src="#texture" position="-1 0 0" width="3" height="3" depth="3"></a-box>
+      <a-petersrobot position="-4 0 0"></a-petersrobot> 
+      <a-box position="0 0 0" width="3" height="3" depth="3" src="#texture"></a-box>
+      <a-box position="4 0 0" width="3" height="2" depth="1" color="red"></a-box>
       <a-sky color="#210657"></a-sky>
     </a-scene>
   </body>
